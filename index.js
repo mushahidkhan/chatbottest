@@ -20,7 +20,7 @@ app.get('/', function(req, res) { //will check for first slash
 //facebook
 app.get('/webhook/', function(req, res) {
 
-	if(req.query["hub.verify_token"] === " ") {
+	if(req.query["hub.verify_token"] === "blondiebytes") {
 		res.send(req.query['hub.challenge'])
 	}
 	res.send("wrong token")
