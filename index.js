@@ -13,14 +13,14 @@ app.use(bodyParse.urlencoded({extended: false})) // parses the text as URL encod
 app.use(bodyParser.json()) //parses the text as JSON
 
 //setting up routes(routs are how apps respond to a cliends request to a particualr endpoint(which is a url))
-app.get('/', function(req, res) { //will check for first slash
+app.get('/', function(req, res) { //will check for first slashø
 	res.send("Hi I am the chat bot!!!")
 
 })
 //facebook
 app.get('/webhook/', function(req, res) {
 
-	if(req.query["hub.verify_token"] === "blondiebytes") {
+	if(req.query["hub.verify_token"] === "my_voice_is_my_password_verify_me") {
 		res.send(req.query['hub.challenge'])
 	}
 	res.send("wrong token")
